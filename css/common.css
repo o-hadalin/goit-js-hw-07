@@ -12,3 +12,47 @@ body {
   color: #212121;
   line-height: 1.5;
 }
+
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+img {
+  display: block;
+  margin: 0 auto;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.gallery-item {
+  /* flex: 1 1 calc((100% - 2 * 16px) / 3); */
+  max-width: calc((100% - 2 * 16px) / 3);
+  display: flex;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.gallery-image {
+  width: 850px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+}
