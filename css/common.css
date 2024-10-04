@@ -42,7 +42,6 @@ img {
   gap: 16px;
 }
 .gallery-item {
-  /* flex: 1 1 calc((100% - 2 * 16px) / 3); */
   max-width: calc((100% - 2 * 16px) / 3);
   display: flex;
   height: auto;
