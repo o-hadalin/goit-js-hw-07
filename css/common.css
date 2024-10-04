@@ -1,7 +1,7 @@
+/* All styles */
 * {
   box-sizing: border-box;
 }
-
 body {
   margin: 16px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
@@ -12,7 +12,6 @@ body {
   color: #212121;
   line-height: 1.5;
 }
-
 a {
   text-decoration: none;
 }
@@ -34,24 +33,225 @@ img {
   display: block;
   margin: 0 auto;
 }
+
+/* Styles task-1 */
+ul#categories {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 24px;
+  padding: 20px;
+}
+ul#categories > li {
+  border-radius: 8px;
+  padding: 24px;
+  width: 400px;
+  background-color: #f6f6fe;
+}
+ul#categories > li ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+}
+ul#categories > li ul li {
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+ul#categories > li h2 {
+  margin-bottom: 12px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* Styles task-2 */
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
+  justify-content: space-between;
+  width: 1128px;
+  margin: 0 auto;
+  gap: 48px 24px;
 }
-.gallery-item {
-  max-width: calc((100% - 2 * 16px) / 3);
-  display: flex;
-  height: auto;
-  justify-content: center;
-  align-items: center;
+.gallery-element {
+  /* max-width: calc((100% - 2 * 16px) / 3); */
+  flex: 0 0 360px;
+  height: 300px;
   overflow: hidden;
 }
 .gallery-image {
-  width: 850px;
-  height: auto;
+  width: 360px;
+  height: 300px;
   border-radius: 12px;
-  object-fit: contain;
+  object-fit: cover;
+}
+
+/* Styles task-3 */
+input#name-input {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  padding: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  outline: none;
+  margin-bottom: 24px;
+}
+input#name-input::placeholder {
+  color: #a0a0a0;
+  font-size: 16px;
+}
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #2e2f42;
+  margin: 0;
+}
+h1 span#name-output {
+  font-weight: 600;
+  color: #2e2f42;
+}
+
+/* Styles task-4 */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 8px;
+  max-width: 360px;
+}
+.login-form label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2e2f42;
+}
+.login-form input {
+  width: 100%;
+  height: 40px;
+  padding: 8px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: #2e2f42;
+  outline: none;
+}
+.login-form button {
+  width: 86px;
+  height: 40px;
+  background-color: #4e75ff;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.login-form button:focus,
+.login-form button:hover {
+  background-color: #6c8cff;
+}
+.login-form input:focus,
+.login-form input:hover {
+  border-color: #000;
+}
+
+/* Styles task-5 */
+.widget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+.widget p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  margin-bottom: 16px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+}
+.change-color {
+  background-color: #4e75ff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Styles task-6 */
+#controls {
+  background-color: #f6f6fe;
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+#controls input[type='number'] {
+  border: 1px solid #808080;
+  border-radius: 8px;
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  font-size: 16px;
+}
+button {
+  width: 120px;
+  height: 40px;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+button[data-create] {
+  background-color: #4e75ff;
+}
+button[data-create]:hover,
+button[data-create]:focus {
+  background-color: #6c8cff;
+}
+button[data-destroy] {
+  background-color: #ff4e4e;
+}
+button[data-destroy]:hover,
+button[data-destroy]:focus {
+  background-color: #ff7070;
+}
+#boxes {
+  background-color: #f6f6fe;
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+  overflow-x: auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+#boxes div {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  flex-shrink: 0;
 }

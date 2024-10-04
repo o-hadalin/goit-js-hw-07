@@ -31,12 +31,12 @@ function makeBox(inputNum) {
     const size = 30 + index * 10;
     box.style.width = `${size}px`;
     box.style.height = `${size}px`;
-    box.style.backgroundColor = getRandomHexColor(); 
-    box.style.margin = '5px'; 
+    box.style.backgroundColor = getRandomHexColor();
     massive.push(box);
   }
   elementField.append(...massive);
 }
+
 function destroyField() {
   elementField.innerHTML = '';
 }
